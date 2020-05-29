@@ -16,9 +16,9 @@ function App() {
 
   return (
     <BrowserRouter>
-      <div class="grid-container">
-        <header class="header">
-          <div class="brand">
+      <div className="grid-container">
+        <header className="header">
+          <div className="brand">
             <button onClick={openMenu}>
               &#9776;
             </button>
