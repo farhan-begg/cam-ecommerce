@@ -15,7 +15,7 @@ function ProductScreen(props) {
             //
         };
     }, []);
-
+    // redirect user to /cart
     const handleAddToCart = () => {
         props.history.push("/cart/" + props.match.params.id + "?qty=" + qty)
     }
