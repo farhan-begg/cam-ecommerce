@@ -62,7 +62,7 @@ function CartScreen(props) {
                                         </select>
                                         <button type="button" className="button" onClick={() => removeFromCartHandler(item.product)} >
                                             Delete
-                    </button>
+                                        </button>
                                     </div>
                                 </div>
                                 <div className="cart-price">

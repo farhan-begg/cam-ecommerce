@@ -1,7 +1,19 @@
 import express from 'express';
 import data from './data';
+import config from './config';
+import dotenv from 'dotenv';
+import mongoose from 'mongoose';
+
+dotenv.config();
 
 const app = express();
+
+const mongodbUrl = config.MONGODB_URL;
+mongoose.connect(mongodbUrl, {
+    useNewUrlParser: true,
+    useUnifiedTopology: true,
+    useCreateIndex: true
+}).catch(error => console.log(error.reason));
 
 app.get("/api/products/:id", (req, res) => {
     const productId = req.params.id;
